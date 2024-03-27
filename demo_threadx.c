@@ -185,9 +185,9 @@ void    thread_0_entry(ULONG thread_input)
 UINT    status;
 
     // LED OFF
-    gpio_init(PICO_DEFAULT_LED_PIN);
-    gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
-    gpio_put(PICO_DEFAULT_LED_PIN, 0);
+    // gpio_init(PICO_DEFAULT_LED_PIN);
+    // gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
+    // gpio_put(PICO_DEFAULT_LED_PIN, 0);
 
     /* This thread simply sits in while-forever-sleep loop.  */
     while(1)
@@ -196,22 +196,22 @@ UINT    status;
         /* Increment the thread counter.  */
         thread_0_counter++;
 
-        if (thread_0_counter % 2 == 0) {
-            gpio_put(PICO_DEFAULT_LED_PIN, 1);
-        } else {
-            gpio_put(PICO_DEFAULT_LED_PIN, 0);
-        }
+        // if (thread_0_counter % 2 == 0) {
+        //     gpio_put(PICO_DEFAULT_LED_PIN, 1);
+        // } else {
+        //     gpio_put(PICO_DEFAULT_LED_PIN, 0);
+        // }
 
-        /* Print results.  */
-        printf("**** ThreadX Demonstration on Raspberry Pi Pico **** \n\n");
-        printf("           thread 0 events sent:          %lu\n", thread_0_counter);
-        printf("           thread 1 messages sent:        %lu\n", thread_1_counter);
-        printf("           thread 2 messages received:    %lu\n", thread_2_counter);
-        printf("           thread 3 obtained semaphore:   %lu\n", thread_3_counter);
-        printf("           thread 4 obtained semaphore:   %lu\n", thread_4_counter);
-        printf("           thread 5 events received:      %lu\n", thread_5_counter);
-        printf("           thread 6 mutex obtained:       %lu\n", thread_6_counter);
-        printf("           thread 7 mutex obtained:       %lu\n\n", thread_7_counter);
+        // /* Print results.  */
+        // printf("**** ThreadX Demonstration on Raspberry Pi Pico **** \n\n");
+        // printf("           thread 0 events sent:          %lu\n", thread_0_counter);
+        // printf("           thread 1 messages sent:        %lu\n", thread_1_counter);
+        // printf("           thread 2 messages received:    %lu\n", thread_2_counter);
+        // printf("           thread 3 obtained semaphore:   %lu\n", thread_3_counter);
+        // printf("           thread 4 obtained semaphore:   %lu\n", thread_4_counter);
+        // printf("           thread 5 events received:      %lu\n", thread_5_counter);
+        // printf("           thread 6 mutex obtained:       %lu\n", thread_6_counter);
+        // printf("           thread 7 mutex obtained:       %lu\n\n", thread_7_counter);
 
         /* Sleep for 50 ticks.  */
         tx_thread_sleep(100);
