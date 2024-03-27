@@ -30,13 +30,7 @@ This sample demonstrates [Azure RTOS threadx](https://azure.com/rtos) on Raspber
 2. Open a **Developer command prompt** for VS2019 and go to the cloned project to build
    
    ```
-   cd Azure-RTOS-on-Azure-Sphere-Mediatek-MT3620
-   mkdir build
-   cd build
-   # assume PICO-SDK-PATH is set to ../../pico-sdk
-   cmake .. -G "NMake Makefiles"
-   # waiting for namke project generation
-   nmake 
+   Executing command: "C:\Program Files\CMake\bin\cmake.EXE" --build c:/www/Azure-RTOS-on-Raspberry-Pi-Pico-RP2040-main/build --config Debug --target all -j 42 --
    ```
 
 3. Hold the BOOTSEL button on Raspberry Pi Pico and connect micro-USB cable, you will see a new USB drive `PRI-PR2` is mounted.
