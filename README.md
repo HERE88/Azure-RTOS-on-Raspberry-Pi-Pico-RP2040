@@ -26,16 +26,20 @@ This sample demonstrates [Azure RTOS threadx](https://azure.com/rtos) on Raspber
    ```
    git clone --recurse-submodules https://github.com/HERE88/Azure-RTOS-on-Raspberry-Pi-Pico-RP2040.git
    ```
+2. If you have downloaded the repo without using the --recurse-submodules argument, you need to run:
 
-2. Open a **Developer command prompt** for vscode and go to the cloned project to build
+   ```
+   git submodule update --init --recursive
+   ```
+4. Open a **Developer command prompt** for vscode and go to the cloned project to build
    
    ```
    Executing command: "C:\Program Files\CMake\bin\cmake.EXE" --build c:/www/Azure-RTOS-on-Raspberry-Pi-Pico-RP2040-main/build --config Debug --target all -j 42 --
    ```
 
-3. Hold the BOOTSEL button on Raspberry Pi Pico and connect micro-USB cable, you will see a new USB drive `PRI-PR2` is mounted.
+5. Hold the BOOTSEL button on Raspberry Pi Pico and connect micro-USB cable, you will see a new USB drive `PRI-PR2` is mounted.
 
-4. Drag and drop the `Azure-RTOS-on-Raspberry-Pi-Pico-RP2040.uf2` file in build folder to the USB drive
+6. Drag and drop the `Azure-RTOS-on-Raspberry-Pi-Pico-RP2040.uf2` file in build folder to the USB drive
 
 ## Observe the output
 
