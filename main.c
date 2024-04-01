@@ -28,7 +28,6 @@ void on_uart_rx() {
 int main() {
 
     stdio_init_all();
-    printf("ThreadX Demo\n");
 
     // Set UART flow control CTS/RTS, we don't want these, so turn them off
     uart_set_hw_flow(UART_ID, false, false);
@@ -54,8 +53,10 @@ int main() {
     // OK, all set up.
     // Lets send a basic string out, and then run a loop and wait for RX interrupts
     // The handler will count them, but also reflect the incoming data back with a slight change!
-    uart_puts(UART_ID, "\nHello, uart interrupts\n");
-    
+    uart_puts(UART_ID, "\r\nHello, uart interrupts\r\n");
+
+    printf("ThreadX Demo 222\r\n");
+
     demo_threadx();
 
     return 0;
