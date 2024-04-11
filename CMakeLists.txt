@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.12)
 
 # WHT
-set(PICO_SDK_PATH "D:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk")
-set(PICO_TOOLCHAIN_PATH "D:/Program Files/Raspberry Pi/Pico SDK v1.5.1/gcc-arm-none-eabi/bin")
+set(PICO_SDK_PATH "D:/Pico_SDK_v151/pico-sdk")
+#set(PICO_TOOLCHAIN_PATH "D:/Program Files/Raspberry Pi/Pico SDK v1.5.1/gcc-arm-none-eabi/bin")
 set(PICO_BOARD "pico_w")
 
 include(pico_sdk_import.cmake)
@@ -25,6 +25,6 @@ set(THREADX_ARCH "cortex_m0")
 set(THREADX_TOOLCHAIN "gnu")
 
 # WHT
-add_subdirectory(threadx_20240326)
+add_subdirectory(threadx)
 
 target_link_libraries(${PROJECT_NAME} pico_stdlib cmsis_core azrtos::threadx)
